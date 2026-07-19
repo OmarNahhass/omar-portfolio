@@ -1,26 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.71afba51.css",
-    "main.js": "/static/js/main.9672ca9a.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/poppred.webm": "/static/media/poppred.a092cbf8ad2f67fddb2d.webm",
-    "static/media/stonk.webm": "/static/media/stonk.679be8e8abfd40c06ea9.webm",
-    "static/media/ye.png": "/static/media/ye.17a3c0666a13fb6ab55e.png",
-    "static/media/github.png": "/static/media/github.fdbb4c0205644f2d73e7.png",
-    "static/media/atom.png": "/static/media/atom.52de6422409ad1571d1f.png",
-    "static/media/linkedin.png": "/static/media/linkedin.c8a2b56d8b6221909c50.png",
-    "static/media/email.png": "/static/media/email.52ba29b229f5e89c9dd8.png",
-    "static/media/css-3.png": "/static/media/css-3.7654ce00c5ac2e76e015.png",
-    "static/media/html.png": "/static/media/html.31497a13d5b51cea9b7d.png",
-    "static/media/share.png": "/static/media/share.10689775c1c4059f9d81.png",
-    "static/media/java.png": "/static/media/java.375f91150aebfc2e19ef.png",
+    "main.css": "/static/css/main.67870588.css",
+    "main.js": "/static/js/main.f5b49ddd.js",
+    "static/media/concordia.png": "/static/media/concordia.f5960650a3e506c9e9a2.png",
+    "static/media/burnabynorth.png": "/static/media/burnabynorth.83577aef1a8dc2c298b9.png",
     "index.html": "/index.html",
-    "main.71afba51.css.map": "/static/css/main.71afba51.css.map",
-    "main.9672ca9a.js.map": "/static/js/main.9672ca9a.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.67870588.css.map": "/static/css/main.67870588.css.map",
+    "main.f5b49ddd.js.map": "/static/js/main.f5b49ddd.js.map"
   },
   "entrypoints": [
-    "static/css/main.71afba51.css",
-    "static/js/main.9672ca9a.js"
+    "static/css/main.67870588.css",
+    "static/js/main.f5b49ddd.js"
   ]
 }
