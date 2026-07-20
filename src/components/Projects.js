@@ -1,6 +1,6 @@
 const projects = [
   {
-    name: "MMA Betting Tracker",
+    name: "FightLedger",
     desc: "Full-stack betting platform built on a normalized 8-table PostgreSQL schema with row-level security policies enforced at the database layer, ensuring zero cross-user data leakage across all queries. Architected a serverless API layer on Vercel to interface with a third-party MMA data provider, enabling automated fight-card ingestion and result-based bet settlement. Implements JWT-based auth via Supabase, a social graph (follow system) with a materialized activity feed, and a public leaderboard with ROI ranking — all served through a security_invoker view to scope reads per authenticated user.",
     tags: [
       "React",
@@ -11,8 +11,8 @@ const projects = [
       "REST API",
       "JWT",
     ],
-    live: "https://mma-tracker-theta.vercel.app",
-    github: "https://github.com/OmarNahhass/mma-tracker",
+    live: "https://fightledger.vercel.app",
+    github: "https://github.com/OmarNahhass/fightledger",
   },
   {
     name: "Stock Analyzer",
