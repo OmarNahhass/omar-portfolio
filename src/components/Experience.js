@@ -1,10 +1,14 @@
+import elena from "./images/elena.png";
+import earls from "./images/earls.png";
+import keg from "./images/thekeg.png";
+
 export default function Experience() {
   return (
     <section className="section">
       <h2 className="section-title">Experience</h2>
 
       <div className="edu-item">
-        <div className="edu-logo-placeholder">E</div>
+        <img src={elena} alt="Restaurant Elena" className="edu-logo" />
         <div className="edu-body">
           <div className="edu-school">Restaurant Elena</div>
           <div className="edu-degree">Lunch Cook</div>
@@ -23,7 +27,7 @@ export default function Experience() {
       </div>
 
       <div className="edu-item">
-        <div className="edu-logo-placeholder">E</div>
+        <img src={earls} alt="Earls Kitchen + Bar" className="edu-logo" />
         <div className="edu-body">
           <div className="edu-school">Earls Kitchen + Bar</div>
           <div className="edu-degree">Oven Cook</div>
@@ -42,7 +46,7 @@ export default function Experience() {
       </div>
 
       <div className="edu-item">
-        <div className="edu-logo-placeholder">K</div>
+        <img src={keg} alt="The Keg Steakhouse" className="edu-logo" />
         <div className="edu-body">
           <div className="edu-school">The Keg Steakhouse</div>
           <div className="edu-degree">Salad Tender</div>
