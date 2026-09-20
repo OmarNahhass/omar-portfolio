@@ -30,11 +30,26 @@ const projects = [
     github: "https://github.com/OmarNahhass/silo",
   },
   {
-    name: "Population Predictor",
-    desc: "A data-driven population forecasting tool that models demographic trends and projects future estimates using statistical regression and time-series analysis.",
-    tags: ["Python", "Data Analysis", "NumPy", "Matplotlib"],
+    name: "Prochain Passage",
+    desc: "A live visualization of Montreal's métro, built as a station display: the whole network animating in real time alongside next departures for the station the screen sits at. STM publishes GPS positions for buses but not for métro trains, which run underground, so train positions are derived from the published schedule — each train interpolated between the two stations it's travelling between, drawn as a capsule oriented along its direction of travel. Trains approaching the viewer's own station are enlarged and haloed, pulsing in the final minute before arrival. A pandas pipeline filters a 200MB+ GTFS feed down to a network model of 68 stations, their adjacency and travel times, and regenerates the day's trips automatically each morning, re-downloading the source feed when it expires. Station positions come from a generated 45-degree schematic rather than true coordinates, since real geography packs downtown stations too tightly for labels to fit — the same trade-off transit maps have made since Beck's 1933 Underground diagram. A FastAPI backend proxies STM's i3 service-status API with server-side credentials and response caching, surfacing line disruptions and station-level notices as they're published.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "pandas",
+      "JavaScript",
+      "SVG",
+      "GTFS",
+      "REST API",
+    ],
+    live: "https://mtl-metro.onrender.com",
+    github: "https://github.com/OmarNahhass/prochain-passage",
+  },
+  {
+    name: "Tower Defense",
+    desc: "A tower defense game written in C++ across 8+ classes, covering wave management, pathfinding, and the game entity hierarchy. Built collaboratively with a partner as a COMP 345 course project at Concordia, with an emphasis on applying object-oriented design principles — inheritance for tower and enemy variants, and the observer pattern for state changes propagating to the game view.",
+    tags: ["C++", "OOP", "Design Patterns", "Game Development"],
     live: null,
-    github: "https://github.com/OmarNahhass",
+    github: "https://github.com/OmarNahhass/tower-defense",
   },
 ];
 
