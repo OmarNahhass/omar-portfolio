@@ -1,5 +1,19 @@
 const projects = [
   {
+    name: "distsys-go",
+    desc: "A Dynamo-style distributed key-value store written from scratch in Go, with no RPC or consensus libraries. Nodes talk over a hand-rolled RPC layer on raw TCP, using length-prefixed JSON framing and a goroutine per connection. Keys are placed on a consistent hash ring with virtual nodes, so adding or removing a node moves only a small fraction of keys, and each key is replicated to the next N distinct physical nodes on the ring. A coordinator enforces tunable N/R/W quorums, fanning reads and writes out to replicas concurrently and failing the request when too few acknowledge. Every write carries a vector clock: on read, the coordinator discards versions that are causally dominated and returns concurrent siblings as conflicts rather than silently picking a winner. A gossip protocol handles membership and failure detection, with nodes pinging peers round-robin and exchanging member lists so a node's death spreads through the cluster even to nodes that never contacted it directly. Covered by tests for conflict detection under concurrent writes, failure propagation through gossip, and minimal key movement on ring changes.",
+    tags: [
+      "Go",
+      "Distributed Systems",
+      "TCP",
+      "Consistent Hashing",
+      "Vector Clocks",
+      "Gossip Protocol",
+    ],
+    live: null,
+    github: "https://github.com/OmarNahhass/distsys-go",
+  },
+  {
     name: "FightLedger",
     desc: "Full-stack betting platform built on a normalized 8-table PostgreSQL schema with row-level security policies enforced at the database layer, ensuring zero cross-user data leakage across all queries. Architected a serverless API layer on Vercel to interface with a third-party MMA data provider, enabling automated fight-card ingestion and result-based bet settlement. Implements JWT-based auth via Supabase, a social graph (follow system) with a materialized activity feed, and a public leaderboard with ROI ranking — all served through a security_invoker view to scope reads per authenticated user.",
     tags: [

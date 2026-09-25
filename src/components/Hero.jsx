@@ -28,8 +28,8 @@ export default function Hero() {
     <section className="hero">
       <h1 className="hero-name">Hi, I am Omar</h1>
       <p className="hero-bio">
-        I'm a Computer Science student at Concordia University (Co-op) hoping to pursue
-        my passion in mathematics through my studies!
+        I'm a Computer Science student at Concordia University hoping to pursue
+        my passion in Computers through my studies!
       </p>
       <div className="hero-actions">
         <a
