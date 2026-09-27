@@ -28,14 +28,12 @@ export default function Hero() {
     <section className="hero">
       <h1 className="hero-name">Hi, I am Omar</h1>
       <p className="hero-bio">
-        I'm a Computer Science student at Concordia University hoping to pursue
-        my passion in Computers through my studies!
+        I'm a Computer Science student at Concordia University pursuing 
+        my passion!
       </p>
       <div className="hero-actions">
         <a
-          href="https://github.com/OmarNahhass"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#projects"
           className="btn-primary"
         >
           See Projects

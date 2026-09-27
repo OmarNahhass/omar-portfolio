@@ -1,7 +1,7 @@
 const projects = [
   {
     name: "distsys-go",
-    desc: "A Dynamo-style distributed key-value store written from scratch in Go, with no RPC or consensus libraries. Nodes talk over a hand-rolled RPC layer on raw TCP, using length-prefixed JSON framing and a goroutine per connection. Keys are placed on a consistent hash ring with virtual nodes, so adding or removing a node moves only a small fraction of keys, and each key is replicated to the next N distinct physical nodes on the ring. A coordinator enforces tunable N/R/W quorums, fanning reads and writes out to replicas concurrently and failing the request when too few acknowledge. Every write carries a vector clock: on read, the coordinator discards versions that are causally dominated and returns concurrent siblings as conflicts rather than silently picking a winner. A gossip protocol handles membership and failure detection, with nodes pinging peers round-robin and exchanging member lists so a node's death spreads through the cluster even to nodes that never contacted it directly. Covered by tests for conflict detection under concurrent writes, failure propagation through gossip, and minimal key movement on ring changes.",
+    desc: "Dynamo-design-inspired distributed key-value store. Built on an RPC layer over raw TCP, it uses consistent hashing to route keys to nodes, quorum replication to balance consistency with availability, and vector clocks to detect conflicts between replicas.",
     tags: [
       "Go",
       "Distributed Systems",
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     name: "FightLedger",
-    desc: "Full-stack betting platform built on a normalized 8-table PostgreSQL schema with row-level security policies enforced at the database layer, ensuring zero cross-user data leakage across all queries. Architected a serverless API layer on Vercel to interface with a third-party MMA data provider, enabling automated fight-card ingestion and result-based bet settlement. Implements JWT-based auth via Supabase, a social graph (follow system) with a materialized activity feed, and a public leaderboard with ROI ranking — all served through a security_invoker view to scope reads per authenticated user.",
+    desc: "Full-stack social betting tracker for MMA. Bets settle automatically on login, with a public leaderboard, a follow system with a live activity feed, and detailed ROI analytics.",
     tags: [
       "React",
       "PostgreSQL",
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     name: "Silo",
-    desc: "Full-stack forecasting platform that runs 10 statistical and machine-learning models in parallel using a 4-worker thread pool, then combines their outputs into a single prediction using inverse-variance ensemble weighting, so models with lower historical error are weighted more heavily. Every prediction is saved to SQLite and resolved against the next trading day's actual closing price automatically, with no scheduled jobs — resolution happens as a side effect of the next forecast request, and drives a rolling 30-day bias correction per model once at least 10 resolved predictions exist. Includes a Track Record page that runs a paired t-test (SciPy) comparing the ensemble's accuracy to a naive no-change baseline, live intraday forecasting, two-ticker comparison against Yahoo Finance analyst consensus data, and KaTeX-rendered formulas for all 10 models. Deployed on Fly.io and Cloudflare Pages with GitHub Actions deploying both services automatically on every push to main.",
+    desc: "Full-stack forecasting platform that uses 10 prediction models on stock and cryptocurrency price history to predict future prices. Uses inverse-variance ensemble to maximize accuracy. Tracks every prediction against real outcomes, and includes live intraday forecasting and tools to compare stocks against Yahoo Finance analyst targets.",
     tags: [
       "React",
       "TypeScript",
@@ -45,7 +45,7 @@ const projects = [
   },
   {
     name: "Prochain Passage",
-    desc: "A live visualization of Montreal's métro, built as a station display: the whole network animating in real time alongside next departures for the station the screen sits at. STM publishes GPS positions for buses but not for métro trains, which run underground, so train positions are derived from the published schedule — each train interpolated between the two stations it's travelling between, drawn as a capsule oriented along its direction of travel. Trains approaching the viewer's own station are enlarged and haloed, pulsing in the final minute before arrival. A pandas pipeline filters a 200MB+ GTFS feed down to a network model of 68 stations, their adjacency and travel times, and regenerates the day's trips automatically each morning, re-downloading the source feed when it expires. Station positions come from a generated 45-degree schematic rather than true coordinates, since real geography packs downtown stations too tightly for labels to fit — the same trade-off transit maps have made since Beck's 1933 Underground diagram. A FastAPI backend proxies STM's i3 service-status API with server-side credentials and response caching, surfacing line disruptions and station-level notices as they're published.",
+    desc: "Full-stack transit visualization tool intended for metro station screens that shows live positions of every active metro train in Montreal. Features a custom-built schematic map covering evey station, with live service status gathered directly from the public transit authority.",
     tags: [
       "Python",
       "FastAPI",
@@ -60,7 +60,7 @@ const projects = [
   },
   {
     name: "Tower Defense",
-    desc: "A tower defense game written in C++ across 8+ classes, covering wave management, pathfinding, and the game entity hierarchy. Built collaboratively with a partner as a COMP 345 course project at Concordia, with an emphasis on applying object-oriented design principles — inheritance for tower and enemy variants, and the observer pattern for state changes propagating to the game view.",
+    desc: "A collaboratively built tower defense game using object-oriented architecture.",
     tags: ["C++", "OOP", "Design Patterns", "Game Development"],
     live: null,
     github: "https://github.com/OmarNahhass/tower-defense",

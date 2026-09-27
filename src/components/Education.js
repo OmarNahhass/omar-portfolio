@@ -11,14 +11,15 @@ export default function Education() {
         <div className="edu-body">
           <div className="edu-school">Concordia University</div>
           <div className="edu-degree">
-            Bachelor of Science in Computer Science (Co-op)
+            Bachelor of Science in Computer Science
           </div>
           <div className="edu-meta">Sep 2022 – Present · Montreal, QC</div>
           <ul className="edu-bullets">
+            <li>Cumulative GPA: 3.90/4.30</li>
             <li>
               Relevant coursework: Data Structures, Algorithms, Operating
               Systems, Web Programming, Probability & Statistics, Linear
-              Algebra, Artificial Intelelligence
+              Algebra, Artificial Intelligence
             </li>
             <li>Active member of the Concordia Chess Club</li>
           </ul>
@@ -36,7 +37,7 @@ export default function Education() {
           <div className="edu-degree">High School Diploma</div>
           <div className="edu-meta">Sep 2017 – Jun 2022 · Burnaby, BC</div>
           <ul className="edu-bullets">
-            <li>Cumulative GPA: 4.0/4.0</li>
+            <li>Cumulative GPA: 3.75/4.0</li>
           </ul>
         </div>
       </div>
